@@ -52,7 +52,6 @@ jobs:
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
       with:
-        key: ${{secrets.PRIVATE_KEY}}
-        host: ec2-13-233-10-252
-        username: ${{secrets.USER_NAME}} .
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
         

@@ -36,22 +36,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
-
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v3
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-        
+      - name: executing remote ssh commands to deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ec2-13-233-10-252
+          username: ${{ secrets.USER_NAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          
+          
+          

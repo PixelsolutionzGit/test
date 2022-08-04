@@ -50,11 +50,8 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with: 
         aws-region: us-east-1
-      env:
-        aws-region: us-east-1
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER_NAME }}
-        key: ${{ secrets.PRIVATE_KEY }}
+        aws-access-key-id: abc
+        aws-secret-access-key: abc
     # Step 2
     - name: Create CodeDeploy Deployment
       run: |

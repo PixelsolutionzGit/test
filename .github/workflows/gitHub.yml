@@ -48,6 +48,8 @@ jobs:
         npm install
     - name: executing remote ssh commands to deploy
       uses: aws-actions/configure-aws-credentials@v1
+      with: 
+        aws-region: us-east-1
       env:
         aws-region: us-east-1
         host: ${{ secrets.HOST }}

@@ -52,7 +52,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         key: ${{ secrets.PRIVATE_KEY }}
-    # Step 2
+    # Step 2 test
     - name: Create CodeDeploy Deployment
       run: |
         cd /var/

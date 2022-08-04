@@ -47,7 +47,7 @@ jobs:
       run: |
         npm install
     - name: executing remote ssh commands to deploy
-      uses: appleboy/ssh-action@master
+      uses: aws-actions/configure-aws-credentials@v1
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}

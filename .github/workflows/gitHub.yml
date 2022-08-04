@@ -49,7 +49,6 @@ jobs:
     - name: executing remote ssh commands to deploy
       uses: aws-actions/configure-aws-credentials@v1
       env:
-        host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         key: ${{ secrets.PRIVATE_KEY }}
     # Step 2

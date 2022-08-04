@@ -55,7 +55,7 @@ jobs:
     # Step 2 test
     - name: Create CodeDeploy Deployment
       run: |
-        cd /var/
+        cd /var/ci_cd
         ls
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3

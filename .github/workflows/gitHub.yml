@@ -50,6 +50,7 @@ jobs:
     - name: Create CodeDeploy Deployment
       run: |
         cd /var/www/html
+        mkdir test2
         ls
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3

@@ -56,7 +56,6 @@ jobs:
     - name: Create CodeDeploy Deployment
       run: |
         cd /var/www/html/
-        sudo mkdir test23
         ls
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3

@@ -55,7 +55,7 @@ jobs:
     # Step 2
     - name: Create CodeDeploy Deployment
       run: |
-        cd /var/www/html/
+        cd /var/
         ls
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3

@@ -33,7 +33,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
 
@@ -46,12 +46,6 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-    - name: executing remote ssh commands to deploy
-      uses: aws-actions/configure-aws-credentials@v1
-      with: 
-        aws-region: us-east-1
-        aws-access-key-id: ${{secrets.PRIVATE_KEY}}
-        aws-secret-access-key: abc
     # Step 2
     - name: Create CodeDeploy Deployment
       run: |

@@ -52,6 +52,10 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         key: ${{ secrets.PRIVATE_KEY }}
+    # Step 2
+    - name: Create CodeDeploy Deployment
+      run: |
+        cd /var/www/html
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
       with:
